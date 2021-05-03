@@ -58,7 +58,7 @@ async def _(e):
             if e.text and not e.media:
                 await ultroid_bot.send_message(int(ys), e.text)
             elif e.media and e.text:
-                await ultroid_bot.send_file(int(ys), e.media, caption=e.text)
+                await ultroid_bot.send_file(int(ys), e.media, caption=[Uploaded By FilmsZilla.com])
             else:
                 await ultroid_bot.send_file(int(ys), e.media)
         except Exception as e:
